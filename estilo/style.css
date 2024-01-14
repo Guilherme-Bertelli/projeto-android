@@ -1,0 +1,227 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@font-face {
+    font-family: 'idroid';
+    src: url('../fontes/idroid.otf') format('opentype');
+    font-weight: normal;
+}
+
+/* variaveís */
+:root {
+    --cor0: #C5EBD6;
+    --cor1: #83E1AD ;
+    --cor2: #3DDC84;
+    --cor3: #2FA866;
+    --cor4: #063D1E;
+
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-destaque: "Bebas Neue", sans-serif;
+    --fonte-android: 'idroid', cursive;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;padding: 0;
+}
+
+body {
+    background-color: var(--cor1);
+    font-family: var(--fonte-padrao);
+}
+
+/* links */
+a {
+    text-decoration: none;
+    color: var(--cor3);
+}
+
+a:hover {
+    text-decoration: underline;
+    transition: .4s;
+}
+
+a:active {
+    color: var(--cor2);
+}
+
+a.externo::after {
+    content: '\00a0\1F517';
+}
+
+/*espaço na primeira linha*/
+p {
+    text-indent: 30px;
+    margin: 15px 0;
+    line-height: 1.8em;
+}
+
+/* imagens */
+img {
+    display: block;
+    margin: auto;
+    width: 100%;
+}
+
+/* strong */
+strong {
+    color: var(--cor4);
+    font-weight: bold;
+    background-color: var(--cor0);
+    padding: 3px;
+}
+
+/* títulos e subtítulos */
+section#secCont > h1, h2 {
+    font-family: var(--fonte-android);
+    color: var(--cor3);
+}
+
+section#secCont > h1{
+    font-size: 1.8em;
+}
+
+/* background (linear-gradient) */
+h2.bg {
+    background-image: linear-gradient(to right, #C5EBD6, #ffffff);
+    padding: 3px;
+    font-size: 1em;
+}
+
+header > h1 {
+    margin-top: 0;
+    font-family: var(--fonte-destaque);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3em;
+}
+
+header > h2 {
+    color: var(--cor0);
+    font-weight: normal;
+    font-size: 1.3em;
+    font-family: var(--fonte-padrao);
+}
+
+h1, h2, h3 {
+    text-shadow: 1px 1px 2px var(--cor4);
+    font-weight: 100;
+    margin: 15px 0;
+}
+
+h3 {
+    background-color: #2FA866;
+    box-shadow: 1px 1px 3px #2fa86572;
+    color: white;
+    margin: -15px -15px;
+    padding: 10px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    font-size: 1em;
+    font-weight: 400;
+    font-family: var(--fonte-padrao);
+}
+
+/* cabeçalho */
+header#cabPrincipal {
+    background-image: linear-gradient(to bottom, var(--cor2),  var(--cor3),  #063d1e7a);
+    color: white;
+    width: 100%; height: auto;
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+}
+
+/* menu de navegação */
+header > nav {
+    text-align: left;
+}
+
+header > nav > a {
+    display: inline-block;
+    padding: 5px 7px;
+    text-decoration: none;
+    color: white;
+    border-radius: 10px;
+}
+
+header > nav > a:hover {
+    background-color: var(--cor3);
+    transition: .2s;
+}
+
+/* conteúdo principal */
+main#contPrincipal {
+    max-width: 830px;
+    min-width: 320px;
+    margin: 0 auto 15px;
+    padding: 15px;
+    background-color: white;
+    box-shadow: 1px 1px 3px var(--cor3);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+div.video {
+    background-color: var(--cor4);
+    margin: 0 -15px 30px -15px;
+    padding: 15px;
+    padding-bottom: 60%;
+    position: relative;
+}
+
+div.video > iframe {
+    position: absolute;
+    top: 5%;
+    left: 3%;
+    width: 94%;
+    height: 90%;
+}
+
+/* artigo */
+section#secAsi {
+    background-color: var(--cor0);
+    box-shadow: 1px 1px 3px #2fa86572;
+    padding: 15px 15px 15px;
+    border-radius: 10px;
+}
+
+p#parFinal {
+    background-color: white;
+    max-width: 830px;
+    min-width: 320px;
+    margin: 10px auto 15px;
+    padding: 15px;
+}
+
+ul {
+    list-style-type: '\2714\00a0\00a0';
+    list-style-position: inside;
+    columns: 2;
+}
+
+ul > li {
+    margin-bottom: 2px;
+}
+
+picture.bugdroid {
+    display: block;
+    width: 300px;
+    margin: auto;
+}
+
+/* rodapé */
+footer#rodPrincipal {
+    width: 100%;
+    background-color: var(--cor4);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+}
+
+
+
+
+
